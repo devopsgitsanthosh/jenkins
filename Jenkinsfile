@@ -1,11 +1,18 @@
 pipeline {
 
-agent any
+agent
+node {
+label 'workstation'{
 stages {
-    stage ('sample') {
+    stage ('Stage1') {
    steps {
-echo 'sample'
+echo 'sample1'
 }
+}
+stages {
+    stage ('Stage1') {
+   steps {
+echo 'sample2'
 }
 }
 }
